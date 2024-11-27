@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> GESTIÓ DE PISTES DE PÀDEL </title>
+</head>
+
+<body>
+    <center>
+        <h1> ALTA D'UN NOU SOCI</h1>
+        <br> Introdueix les dades demanades per donar-te d'alta al sistema        
+        <br>
+        <br>
+        <form action="gestiovista.php" method="POST">    
+                <table>
+                <tr>
+                    <td>DNI:</td>
+                    <td><input type="text" inputmode="numeric" name="DNI" required/></td>
+                </tr>
+                <tr>
+                    <td>Nom del soci:</td>
+                    <td><input type="text" name="nom" required/></td>
+                </tr>
+                <tr></tr>
+                    <td>Cognoms del soci:</td>
+                    <td><input type="text" name="cognoms" required/></td>
+                </tr>
+                <tr>
+                    <td>Nivell (1 a 5):</td>
+                    <td><input type="range" min="1" max="5" name="nivell" required/></td>
+                </tr>
+                
+            </table>
+            <br>
+            <input type="submit" name="opcio" value="Alta Soci" />
+        </form>
+        <br>
+        <a href="index.html">Tornar al menú principal</a><br>
+    </center>
+</body>
+
+</html>

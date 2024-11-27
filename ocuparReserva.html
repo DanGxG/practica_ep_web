@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> GESTIÓ DE PISTES DE PÀDEL </title>
+</head>
+
+<body>
+    <center>
+        <h1> OCUPACIÓ D'UNA PISTA RESERVADA</h1>
+        <br> Selecciona la teva pista reservada i introdueix el teu DNI        
+        <br>
+        <br>
+        <form action="gestiovista.php" method="POST">   
+            <?php
+                include_once("classes/control.php");
+                include_once("classes/vista.php"); 
+                $c = new control();
+                $llistat = $c->llistatReservesNoOcupades(); //idPista, dataHora
+                $v = new vista();
+                $v->mostrarLlistatReservesNoOcupades ($llistat, true)
+                ?>
+                <br><br>
+            DNI:    
+            <input type="text" inputmode="numeric" name="DNI" required/></td>
+            
+            <br><br>
+           
+            <input type="submit" name="opcio" value="ocuparReserva" />
+        </form>
+        <br>
+        <a href="index.html">Tornar al menú principal</a><br>
+    </center>
+</body>
+
+</html>
